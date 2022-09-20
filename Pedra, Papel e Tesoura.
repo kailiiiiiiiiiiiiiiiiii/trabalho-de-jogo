@@ -1,0 +1,116 @@
+using System;
+
+namespace ConsoleApp6
+{
+
+
+
+
+
+    // alunos: Kaili Portella Caetano e Linus Dantas design de Games.
+
+    namespace PedraPapelTesoura
+    {
+        class Program
+        {
+            private const bool V = true;
+            static void Main(string[] args)
+            {
+                while (V)
+                {
+                    Console.WriteLine("Joguinho da pedra, papel e tesoura vs. sistema");
+                    Console.WriteLine("Escolha: ");
+                    Console.WriteLine(" [ 1 ] Pedra");
+                    Console.WriteLine(" [ 2 ] Papel");
+                    Console.WriteLine(" [ 3 ] Tesoura");
+                    int caso = int.Parse(Console.ReadLine());
+                    /*
+                    * 0 - Pedra
+                    * 1 - Papel
+                    * 2 - Tesoura
+                    */
+                    switch (caso)
+                    {
+                        case 1:
+
+                            Random r = new Random();
+                            int pc = r.Next(0, 2);
+
+                            if (pc == 0)
+                            {
+                                Console.WriteLine("Empate! Pedra? Também escolhi ela");
+
+                                Console.ReadKey();
+                                break;
+                            }
+                            else if (pc == 1)
+                            {
+                                Console.WriteLine("Você perdeu! ehehehehe eu sabia que o papel era o melhor");
+                                Console.ReadKey();
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Você Venceu! Na próxima eu consigo com a minha tesoura");
+                                Console.ReadKey();
+                                break;
+                            }
+
+                        case 2:
+
+                            Random r1 = new Random();
+                            int pc1 = r1.Next(0, 2);
+
+                            if (pc1 == 0)
+                            {
+                                Console.WriteLine("Você Venceu! eu jurava que a pedra ia ser perfeita");
+                                Console.ReadKey();
+                                break;
+                            }
+                            else if (pc1 == 1)
+                            {
+                                Console.WriteLine("Empate! Você gosta de me imitar né, mas também gosto de papeis");
+                                Console.ReadKey();
+
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Você Perdeu! YYYEEHHHHH ganhei eu sabia que a tesoura era uma boa escolha");
+                                Console.ReadKey();
+                                break;
+                            }
+
+                        case 3:
+
+                            Random r2 = new Random();
+                            int pc2 = r2.Next(0, 2);
+
+                            if (pc2 == 0)
+                            {
+                                Console.WriteLine("Você perdeu! ihihihihi ganhei a pedra sempre me traz sorte");
+                                Console.ReadKey();
+                                break;
+                            }
+                            else if (pc2 == 1)
+                            {
+                                Console.WriteLine("Você Venceu! Você é muito bom, mas na próxima meu papel vai ganhar");
+                                Console.ReadKey();
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Empate! sempre iguais até nas tesouras");
+                                Console.ReadKey();
+                                break;
+                            }
+
+                        default:
+                            Console.WriteLine("ops, tecla errada, tente novamente");
+                            break;
+                    }
+                }
+            }
+        }
+    }
+}       
